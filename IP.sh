@@ -13,6 +13,7 @@ y='\e[99;33m' # Yellow
 b='\e[99;34m' # Blue
 
 clear
+termux-open-url https://www.youtube.com/channel/UCQuGjfmo04jDd6zlBscslGQ
 printf """
 $b╦┌┐┌┌─┐┌─┐   ╦╔═╗
 $b║│││├┤ │ │───║╠═╝
