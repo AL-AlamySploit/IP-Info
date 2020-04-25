@@ -38,7 +38,7 @@ fi
 if [ $a == 0 ];then
 echo -e $g "thank you..!"
 echo -p $g "what 's Your Name..? "Ab
-echo -e $g "thank you " +Ab
+echo -e $g "thank you $Ab"
 sleep 0.5
 echo ''
 exit
