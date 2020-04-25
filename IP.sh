@@ -1,5 +1,4 @@
 #/data/data/com.termux/files
-#AL-Alamy-styling V 1.0.0
 #Channel
 #https://www.youtube.com/channel/UCQuGjfmo04jDd6zlBscslGQ
 # A7Y Team
