@@ -4,31 +4,41 @@
 #https://www.youtube.com/channel/UCQuGjfmo04jDd6zlBscslGQ
 # A7Y Team
 
-black='\e[99;30m' # Black
+r='\e[99;31m' # Red
 
-red='\e[99;31m' # Red
+g='\e[99;32m' # Green
 
-green='\e[99;32m' # Green
+y='\e[99;33m' # Yellow
 
-yellow='\e[99;33m' # Yellow
+b='\e[99;34m' # Blue
 
-blue='\e[99;34m' # Blue
-
-purple='\e[99;35m' # Purple
-
-cyan='\e[99;36m' # Cyan
-
-white='\e[99;37m' # White
 clear
-
-printf "/$$            /$$$$$$                /$$ "         
-printf "|__/           /$$__  $$              |__/"         
-printf " /$$ /$$$$$$$ | $$  \__//$$$$$$        /$$  /$$$$$$ "
-printf "| $$| $$__  $$| $$$$   /$$__  $$      | $$ /$$__  $$"
-printf "| $$| $$  \ $$| $$_/  | $$  \ $$      | $$| $$  \ $$"
-printf "| $$| $$  | $$| $$    | $$  | $$      | $$| $$  | $$"
-printf "| $$| $$  | $$| $$    |  $$$$$$/      | $$| $$$$$$$/"
-printf "|__/|__/  |__/|__/     \______/       |__/| $$____/" 
-printf "                                          | $$"      
-printf "                                          | $$"      
-printf "                                          |__/"      
+printf """
+$b╦┌┐┌┌─┐┌─┐   ╦╔═╗
+$b║│││├┤ │ │───║╠═╝
+$b╩┘└┘└  └─┘   ╩╩""" 
+echo ""
+echo -e $g"(1) IP site"
+echo ''
+echo -e $g"(2) info ip"
+echo ''
+echo -e $g"(0) Exit"
+echo ''
+echo -e -n $green"info > "$y;read a
+echo ''
+if [ $a == 1 ];then
+read -p "Link > " A
+ping $A
+fi
+if [ $a == 2 ];then
+read -p "ip > " B
+curl https://ip-api.com/$B
+fi
+if [ $a == 0 ];then
+echo -e $g "thank you..!"
+echo -p $g "what 's Your Name..? "Ab
+echo -e $g "thank you " +Ab
+sleep 0.5
+echo ''
+exit
+fi
