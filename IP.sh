@@ -28,11 +28,11 @@ echo -e -n $green"info > "$y;read a
 echo ''
 if [ $a == 1 ];then
 read -p "Link > " A
-ping $A
+echo ping $A
 fi
 if [ $a == 2 ];then
 read -p "ip > " B
-curl https://ip-api.com/$B
+echo curl https://ip-api.com/$B
 fi
 if [ $a == 0 ];then
 echo -e $g "thank you..!"
