@@ -14,9 +14,10 @@ b='\e[99;34m' # Blue
 clear
 termux-open-url https://www.youtube.com/channel/UCQuGjfmo04jDd6zlBscslGQ
 printf """
-$b╦┌┐┌┌─┐┌─┐   ╦╔═╗
-$b║│││├┤ │ │───║╠═╝
-$b╩┘└┘└  └─┘   ╩╩""" 
+
+   $b╦┌┐┌┌─┐┌─┐   ╦╔═╗
+   $b║│││├┤ │ │───║╠═╝
+   $b╩┘└┘└  └─┘   ╩╩ """ 
 echo ""
 echo -e $g"(1) IP site"
 echo ''
@@ -40,5 +41,5 @@ echo -p $g "what 's Your Name..? "Ab
 echo -e $g "thank you $Ab"
 sleep 0.5
 echo ''
-exit
+else
 fi
