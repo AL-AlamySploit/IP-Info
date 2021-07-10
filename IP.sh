@@ -11,7 +11,6 @@ y='\e[99;33m' # Yellow
 b='\e[99;34m' # Blue
 
 clear
-termux-open-url https://www.youtube.com/channel/UCQuGjfmo04jDd6zlBscslGQ
 printf """
 
    $b╦┌┐┌┌─┐┌─┐   ╦╔═╗
@@ -35,6 +34,7 @@ read -p "ip > " B
 curl https://ipinfo.io/$B
 fi
 if [ $a == 0 ];then
+termux-open-url https://www.youtube.com/channel/UCQuGjfmo04jDd6zlBscslGQ
 echo -e $g "thank you..!"
 echo -p $g "what 's Your Name..? "Ab
 echo -e $g "thank you $Ab"
