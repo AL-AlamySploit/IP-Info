@@ -19,11 +19,11 @@ printf """
    $b║│││├┤ │ │───║╠═╝
    $b╩┘└┘└  └─┘   ╩╩ """ 
 echo ""
-echo -e $g"(1) IP site"
+echo -e $g"[1] IP site"
 echo ''
-echo -e $g"(2) info ip"
+echo -e $g"[2] info ip"
 echo ''
-echo -e $g"(0) Exit"
+echo -e $g"[0] Exit"
 echo ''
 echo -e -n $green"info > "$y;read a
 echo ''
@@ -33,7 +33,7 @@ ping $A
 fi
 if [ $a == 2 ];then
 read -p "ip > " B
-curl https://ip-api.com/$B
+curl https://ipinfo.io/$B
 fi
 if [ $a == 0 ];then
 echo -e $g "thank you..!"
@@ -41,5 +41,4 @@ echo -p $g "what 's Your Name..? "Ab
 echo -e $g "thank you $Ab"
 sleep 0.5
 echo ''
-else
 fi
