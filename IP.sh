@@ -1,6 +1,5 @@
-#/data/data/com.termux/files
-#Channel
-#https://www.youtube.com/channel/UCQuGjfmo04jDd6zlBscslGQ
+#/bin/bash
+#Channel: https://www.youtube.com/channel/UCQuGjfmo04jDd6zlBscslGQ
 # A7Y Team
 
 r='\e[99;31m' # Red
