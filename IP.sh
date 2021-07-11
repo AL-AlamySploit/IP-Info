@@ -17,9 +17,9 @@ printf """
     $b║╠═╝───║│││├┤ │ │
     $b╩╩     ╩┘└┘└  └─┘ """ 
 echo ""
-echo -e $g"[1] IP site"
+echo -e $g"[1] Web site"
 echo ''
-echo -e $g"[2] info ip"
+echo -e $g"[2] IP Info"
 echo ''
 echo -e $g"[0] Exit"
 echo ''
