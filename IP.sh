@@ -31,7 +31,7 @@ ping $A
 fi
 if [ $a == 2 ];then
 read -p "ip > " B
-curl https://ipinfo.io/$B
+curl https://ipinfo.io/$B -L
 fi
 if [ $a == 0 ];then
 termux-open-url https://www.youtube.com/channel/UCQuGjfmo04jDd6zlBscslGQ
