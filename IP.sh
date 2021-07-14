@@ -21,17 +21,26 @@ echo -e $g"[1] Web site"
 echo ''
 echo -e $g"[2] IP Info"
 echo ''
+echo -e $g"[3] Update Tool"
+echo ''
 echo -e $g"[0] Exit"
 echo ''
 echo -e -n $green"info > "$y;read a
 echo ''
-if [ $a == 1 ];then
+if [ $a == 1 ];
+then
 read -p "Link > " A
 host $A
 fi
-if [ $a == 2 ];then
+if [ $a == 2 ];
+then
 read -p "ip > " B
 curl https://ipinfo.io/$B -L
+fi
+if [ $a == 3 ];
+then
+pkg update -y & pkg upgrade -y
+pkg install dnsutils
 fi
 if [ $a == 0 ];then
 termux-open-url https://www.youtube.com/channel/UCQuGjfmo04jDd6zlBscslGQ
