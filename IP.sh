@@ -25,12 +25,13 @@ echo -e $g"[3] Update Tool"
 echo ''
 echo -e $g"[0] Exit"
 echo ''
-echo -e -n $green"info > "$y;read a
+echo -e -n $g"info > "$y;read a
 echo ''
 if [ $a == 1 ];
 then
 read -p "Link > " A
-host $A
+echo "Domain :" $A
+echo "IP site: " | host $A | grep "has address " | cut -d " " -f4
 fi
 if [ $a == 2 ];
 then
