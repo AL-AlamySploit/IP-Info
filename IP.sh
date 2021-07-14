@@ -15,7 +15,7 @@ printf """
 
     $b╦╔═╗   ╦┌┐┌┌─┐┌─┐
     $b║╠═╝───║│││├┤ │ │
-    $b╩╩     ╩┘└┘└  └─┘ """ 
+    $b╩╩     ╩┘└┘└  └─┘ \n""" 
 echo ""
 echo -e $g"[1] Web site"
 echo ''
@@ -29,13 +29,13 @@ echo -e -n $g"info > "$y;read a
 echo ''
 if [ $a == 1 ];
 then
-read -p "Link > " A
-echo "Domain :" $A
-echo "IP site: " | host $A | grep "has address " | cut -d " " -f4
+read -p " Link > " A
+printf "\n IP Site :" $A
+host $A | grep "has address " | cut -d " " -f 4
 fi
 if [ $a == 2 ];
 then
-read -p "ip > " B
+read -p " ip > " B
 curl https://ipinfo.io/$B -L
 fi
 if [ $a == 3 ];
