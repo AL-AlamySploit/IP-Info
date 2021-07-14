@@ -27,7 +27,7 @@ echo -e -n $green"info > "$y;read a
 echo ''
 if [ $a == 1 ];then
 read -p "Link > " A
-ping $A
+host $A
 fi
 if [ $a == 2 ];then
 read -p "ip > " B
