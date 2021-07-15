@@ -2,7 +2,7 @@
 g='\033[1;32m' # Green
 
 
-echo $g"Updating and Upgrading First..!"
+printf $g"Updating and Upgrading First..!"$g
 pkg update -y;pkg upgrade -y
 pkg install  git -y
 pkg install curl
