@@ -11,6 +11,8 @@ y='\e[99;33m' # Yellow
 b='\e[99;34m' # Blue
 
 clear
+
+login () {
 printf """
 
     $b╦╔═╗   ╦┌┐┌┌─┐┌─┐
@@ -43,11 +45,13 @@ then
 pkg update -y & pkg upgrade -y
 pkg install dnsutils
 fi
-if [ $a == 0 ];then
+if [ $a == 0 ];
+then
+read -p "what 's Your Name..? " name
 termux-open-url https://www.youtube.com/channel/UCQuGjfmo04jDd6zlBscslGQ
-echo -e $g "thank you..!"
-echo -p $g "what 's Your Name..? "Ab
-echo -e $g "thank you $Ab"
-sleep 0.5
-echo ''
+echo "thank you " $name
+sleep 1
+exit
 fi
+}
+login
