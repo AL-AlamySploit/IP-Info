@@ -1,17 +1,15 @@
-#/bin/bash
+#!/bin/bash
+IP-Info v2.0
+#By: Ahmed Mohamed (A 𝕝 - A 𝕝 𝕒 𝕞 𝕪)
 #Channel: https://www.youtube.com/channel/UCQuGjfmo04jDd6zlBscslGQ
 # A7Y Team
 
 r='\e[99;31m' # Red
-
 g='\e[99;32m' # Green
-
 y='\e[99;33m' # Yellow
-
 b='\e[99;34m' # Blue
 
 clear
-
 login () {
 printf """
 
@@ -53,5 +51,8 @@ echo "thank you " $name
 sleep 1
 exit
 fi
+sleep 6
+clear
+login
 }
 login
