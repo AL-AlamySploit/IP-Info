@@ -52,6 +52,7 @@ y)
 echo "Type: cd;cd IP-Info;bash IP.sh "
 echo "[+] Done..!"
 esac
+;;
 n)
 echo "[+] Done..!"
 esac
