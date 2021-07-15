@@ -45,8 +45,16 @@ cd
 rm -rf IP-Info
 git clone https://github.com/AL-AlamySploit/IP-Info
 clear
+echo 'Do you want to run an "IP-Info" tool? [Y/n]'
+read tool
+case $tool in
+y)
 echo "Type: cd;cd IP-Info;bash IP.sh "
 echo "[+] Done..!"
+esac
+n)
+echo "[+] Done..!"
+esac
 exit
 fi
 if [ $a == 0 ];
