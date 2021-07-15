@@ -9,12 +9,7 @@ g='\e[99;32m' # Green
 y='\e[99;33m' # Yellow
 b='\e[99;34m' # Blue
 
-echo "$g Updating and Upgrading First..!"
-pkg update -y;pkg upgrade -y
-pkg install  git -y
-pkg install curl
-pkg install dnsutils
-clear
+
 login () {
 printf """
 
