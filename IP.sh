@@ -9,6 +9,11 @@ g='\e[99;32m' # Green
 y='\e[99;33m' # Yellow
 b='\e[99;34m' # Blue
 
+echo "$g Updating and Upgrading First..!"
+pkg update -y;pkg upgrade -y
+pkg install  git -y
+pkg install curl
+pkg install dnsutils
 clear
 login () {
 printf """
@@ -41,8 +46,6 @@ curl https://ipinfo.io/$B -L
 fi
 if [ $a == 3 ];
 then
-pkg update -y;pkg upgrade -y
-pkg install dnsutils
 cd
 rm -rf IP-Info
 git clone https://github.com/AL-AlamySploit/IP-Info
