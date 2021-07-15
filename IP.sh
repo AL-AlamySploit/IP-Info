@@ -48,7 +48,8 @@ rm -rf IP-Info
 git clone https://github.com/AL-AlamySploit/IP-Info
 clear
 echo "Type: cd "
-echo "$g[+] Done..!"
+echo $g"[+] Done..!"
+exit
 fi
 if [ $a == 0 ];
 then
