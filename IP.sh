@@ -41,14 +41,14 @@ curl https://ipinfo.io/$B -L
 fi
 if [ $a == 3 ];
 then
-pkg update -y & pkg upgrade -y
+pkg update -y;pkg upgrade -y
 pkg install dnsutils
 cd
 rm -rf IP-Info
 git clone https://github.com/AL-AlamySploit/IP-Info
 clear
 echo "Type: cd "
-echo $g"[+] Done..!"
+echo "[+] Done..!"
 exit
 fi
 if [ $a == 0 ];
