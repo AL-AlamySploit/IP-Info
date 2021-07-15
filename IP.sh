@@ -1,5 +1,5 @@
 #!/bin/bash
-IP-Info v2.0
+#IP-Info v2.0
 #By: Ahmed Mohamed (A 𝕝 - A 𝕝 𝕒 𝕞 𝕪)
 #Channel: https://www.youtube.com/channel/UCQuGjfmo04jDd6zlBscslGQ
 # A7Y Team
@@ -15,7 +15,8 @@ printf """
 
     $b╦╔═╗   ╦┌┐┌┌─┐┌─┐
     $b║╠═╝───║│││├┤ │ │
-    $b╩╩     ╩┘└┘└  └─┘ \n""" 
+    $b╩╩     ╩┘└┘└  └─┘ 
+           $y v2.0\n""" 
 echo ""
 echo -e $g"[1] Web site"
 echo ''
@@ -42,6 +43,12 @@ if [ $a == 3 ];
 then
 pkg update -y & pkg upgrade -y
 pkg install dnsutils
+cd
+rm -rf IP-Info
+git clone https://github.com/AL-AlamySploit/IP-Info
+clear
+echo "Type: cd "
+echo "$g[+] Done..!"
 fi
 if [ $a == 0 ];
 then
