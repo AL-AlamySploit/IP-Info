@@ -9,7 +9,7 @@ g='\e[99;32m' # Green
 y='\e[99;33m' # Yellow
 b='\e[99;34m' # Blue
 
-
+clear
 login () {
 printf """
 
