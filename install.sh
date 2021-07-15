@@ -1,5 +1,5 @@
 #!/bin/bash
-g='\e[99;32m' # Green
+g='\033[1;32m' # Green
 
 
 echo $g"Updating and Upgrading First..!"
