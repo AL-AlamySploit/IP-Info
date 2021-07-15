@@ -49,10 +49,15 @@ echo 'Do you want to run an "IP-Info" tool? [Y/n]'
 read tool
 case $tool in
 y)
-echo "Type: cd;cd IP-Info;bash IP.sh "
-echo "[+] Done..!"
-n
-echo "[+] Done..!"
+    echo "Type: cd;cd IP-Info;bash IP.sh "
+    echo "[+] Done..!"
+    ;;
+*)
+    echo "unknown"
+    ;;
+n)
+    echo "[+] Done..!"
+    ;;
 esac
 exit
 fi
