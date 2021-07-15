@@ -45,9 +45,6 @@ cd
 rm -rf IP-Info
 git clone https://github.com/AL-AlamySploit/IP-Info
 clear
-cd IP-Info
-bash IP.sh
-echo "Type: bash IP.sh "
 echo "[+] Done..!"
 exit
 fi
