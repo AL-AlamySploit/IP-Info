@@ -52,7 +52,7 @@ y)
     echo "Type: cd;cd IP-Info;bash IP.sh "
     echo "[+] Done..!"
     ;;
-n
+n)
     echo "[+] Done..!"
     ;;
 *)
