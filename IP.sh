@@ -52,11 +52,11 @@ y)
     echo "Type: cd;cd IP-Info;bash IP.sh "
     echo "[+] Done..!"
     ;;
-*)
-    echo "unknown"
-    ;;
 n
     echo "[+] Done..!"
+    ;;
+*)
+    echo "unknown"
     ;;
 esac
 exit
