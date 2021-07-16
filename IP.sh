@@ -63,8 +63,8 @@ exit
 fi
 if [ $a == 0 ];
 then
-read -p "what is Your Name..? " name
 termux-open-url https://www.youtube.com/channel/UCQuGjfmo04jDd6zlBscslGQ
+read -p "what is Your Name..? " name
 echo "thank you " $name
 sleep 1
 exit
