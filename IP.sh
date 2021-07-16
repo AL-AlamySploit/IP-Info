@@ -55,7 +55,7 @@ y)
 *)
     echo "unknown"
     ;;
-n)
+n
     echo "[+] Done..!"
     ;;
 esac
