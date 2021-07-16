@@ -1,7 +1,8 @@
 #!/bin/bash
 #IP-Info v2.0
 #By: Ahmed Mohamed (A 𝕝 - A 𝕝 𝕒 𝕞 𝕪)
-#Channel: https://www.youtube.com/channel/UCQuGjfmo04jDd6zlBscslGQ
+#YouTube Channel: https://www.youtube.com/channel/UCQuGjfmo04jDd6zlBscslGQ
+#YouTube Channel: https://www.youtube.com/channel/UCm-UlQ6ygk4jkNfgFzlc2LA
 # A7Y Team
 
 r='\e[99;31m' # Red
@@ -63,7 +64,7 @@ exit
 fi
 if [ $a == 0 ];
 then
-termux-open-url https://www.youtube.com/channel/UCQuGjfmo04jDd6zlBscslGQ
+xdg-open https://www.youtube.com/channel/UCQuGjfmo04jDd6zlBscslGQ
 read -p "what is Your Name..? " name
 echo "thank you " $name
 sleep 1
