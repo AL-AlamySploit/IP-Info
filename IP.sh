@@ -33,12 +33,12 @@ if [ $a == 1 ];
 then
 read -p " Link > " A
 printf "\n IP Site :" $A
-host $A | grep "has address " | cut -d " " -f 4
+host $A | grep "has address " | cut -d " " -f 4 >> ipsite.txt
 fi
 if [ $a == 2 ];
 then
 read -p " ip > " B
-curl https://ipinfo.io/$B -L
+curl https://ipinfo.io/$B -L >> ipinfo.txt
 fi
 if [ $a == 3 ];
 then
