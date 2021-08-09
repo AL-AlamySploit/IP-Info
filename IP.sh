@@ -39,7 +39,7 @@ fi
 if [ $a == 2 ];
 then
 read -p " ip > " B
-curl https://ipinfo.io/$B -L > ipinfo-$A.txt
+curl https://ipinfo.io/$B -L > ipinfo-$B.txt
 echo ' file was saved '
 fi
 if [ $a == 3 ];
@@ -56,6 +56,7 @@ y)
     echo "[+] Done..!"
     ;;
 n)
+    clear
     echo "[+] Done..!"
     ;;
 *)
@@ -63,8 +64,6 @@ n)
     ;;
 esac
 exit
-fi
-if [ $a == 0 ];
 then
 xdg-open https://www.youtube.com/channel/UCQuGjfmo04jDd6zlBscslGQ
 read -p "what is Your Name..? " name
