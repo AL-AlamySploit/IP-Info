@@ -47,7 +47,7 @@ then
 cd
 rm -rf IP-Info
 git clone https://github.com/AL-AlamySploit/IP-Info
-clear
+echo ''
 echo 'Do you want to run an "IP-Info" tool? [Y/n]'
 read tool
 case $tool in
