@@ -64,6 +64,8 @@ n)
     ;;
 esac
 exit
+fi
+if [ $a == 0 ];
 then
 xdg-open https://www.youtube.com/channel/UCQuGjfmo04jDd6zlBscslGQ
 read -p "what is Your Name..? " name
