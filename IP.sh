@@ -1,5 +1,5 @@
 #!/bin/bash
-#IP-Info v2.0
+#IP-Info v3.0
 #By: Ahmed Mohamed (A 𝕝 - A 𝕝 𝕒 𝕞 𝕪)
 #YouTube Channel: https://www.youtube.com/channel/UCQuGjfmo04jDd6zlBscslGQ
 #YouTube Channel: https://www.youtube.com/channel/UCm-UlQ6ygk4jkNfgFzlc2LA
@@ -17,7 +17,7 @@ printf """
     $b╦╔═╗   ╦┌┐┌┌─┐┌─┐
     $b║╠═╝───║│││├┤ │ │
     $b╩╩     ╩┘└┘└  └─┘ 
-           $y v2.0\n""" 
+           $y v3.0\n""" 
 echo ""
 echo -e $g"[1] Web site"
 echo ''
@@ -33,12 +33,14 @@ if [ $a == 1 ];
 then
 read -p " Link > " A
 printf "\n IP Site :" $A
-host $A | grep "has address " | cut -d " " -f 4 >> ipsite.txt
+host $A | grep "has address " | cut -d " " -f 4 > ipsite-$A.txt
+echo ' file was saved '
 fi
 if [ $a == 2 ];
 then
 read -p " ip > " B
-curl https://ipinfo.io/$B -L >> ipinfo.txt
+curl https://ipinfo.io/$B -L > ipinfo-$A.txt
+echo ' file was saved '
 fi
 if [ $a == 3 ];
 then
