@@ -27,7 +27,7 @@ $rs\n"""
 echo ""
 echo -e $g" [1] Web site      [2] IP Info"
 echo ''
-echo -e $g" [3] Update Tool    [4] External IP"
+echo -e $g" [3] Update Tool   [4] External IP"
 echo ''
 echo -e $g" [5] Internal IP     [0] Exit"
 echo ''
