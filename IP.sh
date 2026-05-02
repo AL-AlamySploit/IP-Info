@@ -9,38 +9,42 @@ r='\e[99;31m' # Red
 g='\e[99;32m' # Green
 y='\e[99;33m' # Yellow
 b='\e[99;34m' # Blue
-
+c='\e[36m' #Cyan
+rs='\e[0m' #reset
 clear
 login () {
 printf """
+$c
+██╗██████╗      ██╗███╗   ██╗███████╗ ██████╗
+██║██╔══██╗     ██║████╗  ██║██╔════╝██╔═══██╗
+██║██████╔╝     ██║██╔██╗ ██║█████╗  ██║   ██║
+██║██╔═══╝      ██║██║╚██╗██║██╔══╝  ██║   ██║
+██║██║          ██║██║ ╚████║██║     ╚██████╔╝
+╚═╝╚═╝          ╚═╝╚═╝  ╚═══╝╚═╝      ╚═════╝
 
-    $b╦╔═╗   ╦┌┐┌┌─┐┌─┐
-    $b║╠═╝───║│││├┤ │ │
-    $b╩╩     ╩┘└┘└  └─┘ 
-           $y v3.0\n""" 
+$y              IP-INFO TOOL v3.0
+$rs\n"""
 echo ""
-echo -e $g"[1] Web site"
+echo -e $g" [1] Web site      [2] IP Info"
 echo ''
-echo -e $g"[2] IP Info"
+echo -e $g" [3] Update Tool    [4] External IP"
 echo ''
-echo -e $g"[3] Update Tool"
+echo -e $g" [5] Internal IP     [0] Exit"
 echo ''
-echo -e $g"[0] Exit"
+echo -e -n $g" info > "$y;read a
 echo ''
-echo -e -n $g"info > "$y;read a
-echo ''
-if [ $a == 1 ];
-then
+if [ $a == 1 ]; then
 read -p " Link > " A
-printf "\n IP Site :" $A
+printf "\n IP Site :$A"
 host $A | grep "has address " | cut -d " " -f 4 > ipsite-$A.txt
-echo ' file was saved '
+echo ''
+echo '[+] file was saved '
 fi
 if [ $a == 2 ];
 then
 read -p " ip > " B
 curl https://ipinfo.io/$B -L > ipinfo-$B.txt
-echo ' file was saved '
+echo '[+] file was saved '
 fi
 if [ $a == 3 ];
 then
@@ -64,6 +68,38 @@ n)
     ;;
 esac
 exit
+fi
+if [ $a == 4 ];
+then
+#echo ''
+#echo "External IP: " $(curl -s api.ipify.org)
+ip=$(curl -s api.ipify.org)
+echo "External IP: $ip"
+echo "$ip" >> external-ip.txt
+echo '[+] file was saved '
+fi
+if [ "$a" = 5 ]; then
+    echo ''
+    echo "Are you using:"
+    echo "[1] Termux"
+    echo "[2] Linux"
+    read -p "Choose: " sys
+
+    if [ "$sys" = "1" ]; then
+        echo ''
+        echo "Internal IP (Termux):"
+        ipp=$(ifconfig  | grep "inet ")
+        echo "$ipp" >> internal-ip.txt
+        echo '[+] file was saved '
+    elif [ "$sys" = "2" ]; then
+        echo ''
+        echo "Internal IP (Linux):"
+        ip route get 1.1.1.1 | awk '{print $7; exit}' >> internal-ip.txt
+        echo ''
+        echo '[+] file was saved '
+    else
+        echo "Invalid choice"
+    fi
 fi
 if [ $a == 0 ];
 then
